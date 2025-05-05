@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карти</title>
+  <title>6QA</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
   <style>
@@ -32,7 +32,7 @@
     }
 
     #game-container {
-      padding: 20px;
+      padding: 10px;
       flex: 1;
     }
 
@@ -44,44 +44,44 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin: 20px 0;
+      margin: 10px 0;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 10px;
     }
 
     .player-hand {
       background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 12px;
-      min-width: 250px;
+      padding: 12px;
+      border-radius: 8px;
+      min-width: 200px;
       box-shadow: var(--shadow-md);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .player-name {
-      font-size: 1.2em;
-      margin-bottom: 15px;
+      font-size: 1em;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
     .mini-cards {
       display: flex;
-      gap: 10px;
+      gap: 6px;
       justify-content: center;
       flex-wrap: wrap;
     }
 
     .mini-card {
       background: var(--card-bg);
-      padding: 8px 15px;
-      border-radius: 8px;
-      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
       font-weight: 600;
-      min-width: 35px;
+      min-width: 30px;
       text-align: center;
       box-shadow: var(--shadow-sm);
       cursor: pointer;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       transition: all 0.2s ease;
       position: relative;
     }
@@ -145,12 +145,12 @@
     }
 
     .result-text {
-      font-size: 1.5em;
-      margin: 20px auto;
-      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 15px auto;
+      padding: 12px 20px;
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      max-width: 600px;
+      border-radius: 8px;
+      max-width: 90%;
       animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -284,9 +284,9 @@
       background: linear-gradient(135deg, var(--accent-color) 0%, #e6b800 100%);
       color: var(--text-dark);
       border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-size: 1.1em;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1em;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -311,8 +311,8 @@
       bottom: 0;
       width: 100%;
       background: var(--primary-color);
-      padding: 10px;
-      transform: translateY(calc(100% - 70px));
+      padding: 8px;
+      transform: translateY(calc(100% - 50px));
       transition: transform 0.3s ease;
     }
 
@@ -324,17 +324,17 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       cursor: pointer;
-      padding: 20px;
+      padding: 15px;
       background: var(--secondary-color);
-      border-radius: 8px 8px 0 0;
+      border-radius: 6px 6px 0 0;
       box-shadow: var(--shadow-md);
     }
 
     .rules-header h3 {
       margin: 0;
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: var(--text-light);
     }
 
@@ -344,9 +344,10 @@
     }
 
     .rules-content {
-      padding: 20px;
-      max-width: 800px;
+      padding: 15px;
+      max-width: 90%;
       margin: 0 auto;
+      font-size: 0.9em;
     }
 
     .queen-modal {
@@ -356,37 +357,31 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background: var(--primary-color);
-      padding: 20px;
-      border-radius: 12px;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 90%;
+      margin: 0 auto;
       box-shadow: var(--shadow-lg);
       z-index: 1000;
       text-align: center;
     }
 
-    .queen-modal.show {
-      display: block;
-    }
-
-    .queen-modal h3 {
-      margin-top: 0;
-      color: var(--text-light);
-    }
-
     .queen-options {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       justify-content: center;
       flex-wrap: wrap;
-      margin: 20px 0;
+      margin: 15px 0;
     }
 
     .queen-option {
       background: var(--card-bg);
       color: var(--text-dark);
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 0.9em;
       cursor: pointer;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       transition: all 0.2s ease;
     }
 
@@ -440,18 +435,19 @@
       left: 50%;
       transform: translate(-50%, -50%);
       background: var(--primary-color);
-      padding: 30px;
-      border-radius: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      min-width: 250px;
+      max-width: 90%;
       box-shadow: var(--shadow-lg);
       z-index: 1000;
       text-align: center;
-      min-width: 300px;
     }
 
     .winning-modal .game-button {
-      margin-top: 20px;
-      font-size: 1.2em;
-      padding: 15px 30px;
+      margin-top: 15px;
+      font-size: 1.1em;
+      padding: 12px 25px;
     }
 
     .winning-modal .game-button:hover {
@@ -477,9 +473,8 @@
     }
 
     .winning-modal h2 {
-      margin: 0 0 20px 0;
-      font-size: 2em;
-      color: var(--text-light);
+      margin: 0 0 15px 0;
+      font-size: 1.5em;
     }
 
     .winning-modal.luke-win {
@@ -488,6 +483,38 @@
 
     .winning-modal.darthvader-win {
       border: 3px solid var(--black-suit);
+    }
+
+    @media (max-width: 480px) {
+      .player-hand {
+        min-width: 150px;
+        padding: 8px;
+      }
+
+      .mini-card {
+        padding: 4px 8px;
+        font-size: 12px;
+        min-width: 25px;
+      }
+
+      .result-text {
+        font-size: 1em;
+        padding: 10px 15px;
+      }
+
+      .game-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+
+      .rules-content {
+        font-size: 0.85em;
+      }
+
+      .queen-option {
+        padding: 6px 12px;
+        font-size: 0.85em;
+      }
     }
   </style>
 </head>
